@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Geolocation</title>
+  <link rel="stylesheet" type="text/css" href="weather-icon-animated.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</head>
+<body class="teal lighten-4">
+
+    <nav class="teal lighten-1">
+    <div class="nav-wrapper">
+      <div id="testin">
+
+        <a href="#" class="brand-logo">Awesome Weather App</a>
+
+      </div>
+
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <div id="testing">
+
+          <li><div id="location"></div></li>
+          <li>
+            <div class="switch">
+              <label>
+                Cº
+                <input id="CtoF" type="checkbox">
+                <span class="lever"></span>
+                Fº
+              </label>
+            </div>
+          </li>
+        </div>
+
+      </ul>
+    </div>
+  </nav>
+
+    <hr>
+
+    <div id="weather-wrapper">
+      <div id="weather"></div>
+      <div id="weather-description"></div>
+      <div id="weather-icon"></div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="weather.js"></script>
+</body>
+</html>

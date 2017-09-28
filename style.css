@@ -1,0 +1,45 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-wrapper{
+  display: flex;
+}
+
+#testin{
+  display: flex;
+  flex-grow: 1;
+}
+
+#testing{
+  display: flex;
+  flex-shrink: 1;
+  justify-content: space-around;
+  padding: 2px;
+}
+
+#weather-wrapper {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+
+}
+#weather {
+  display: flex;
+  justify-content: center;
+}
+
+#weather-description{
+  display: flex;
+  justify-content: center;
+}
+
+#location {
+  display: flex;
+  justify-content: center;
+}
+
