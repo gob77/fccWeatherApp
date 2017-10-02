@@ -24,6 +24,9 @@ function getWeather(lat, lon, callback){
         document.getElementById("weather").classList.add("celsius");
         document.getElementById("weather-description").innerHTML = currentWeather.weather[0].description;
         callback(currentWeather);
+        if(currentWeather.weather[0].description == "few clouds"){
+          document.getElementById("weather-background").style.backgroundImage = "url('img/few_clouds.jpg')"
+        }
     }
   }
   xhr.open('GET', "https://fcc-weather-api.glitch.me//api/current?lon=" + lon + "&lat=" + lat, true);

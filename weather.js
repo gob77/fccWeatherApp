@@ -12,13 +12,13 @@ var weathers = {
               '  </div>'+
               '</div>'
   ,
-  "Clear": '<div class="icon"> '+
+  "Clear": '<div class="icon sunny"> '+
               '<div class="sun"> '+
                 '<div class="rays"></div> '+
               '</div> '+
             '</div>'
   ,
-  "Thunderstorm": '<div class="icon"> '+
+  "Thunderstorm": '<div class="icon Thunderstorm"> '+
                     '<div class="cloud"></div> '+
                     '<div class="lightning"> '+
                       '<div class="bolt"></div> '+
@@ -26,7 +26,7 @@ var weathers = {
                     '</div> '+
                   '</div>'
   ,
-  "Clouds": '<div class="icon"> '+
+  "Clouds": '<div class="icon cloudy"> '+
               '<div class="cloud"></div> '+
               '<div class="cloud"></div> '+
             '</div>'

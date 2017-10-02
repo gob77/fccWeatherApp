@@ -22,8 +22,8 @@
 /* Modified 2016-05-01 (set color via variable) by PatharaNor */
 
 :root {
-  --weather-border-color: #5A5A5A;
-  --weather-bg-color: #B2DFDB;
+  --weather-border-color: #424344;
+  --weather-bg-color: #ffffff;
 }
 
 .icon {
