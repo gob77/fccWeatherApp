@@ -14,18 +14,21 @@ function getLocation(){
 }
 
 function getWeather(lat, lon, callback){
+  var background = document.getElementById("weather-background");
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState == XMLHttpRequest.DONE) {
         currentWeather = JSON.parse(xhr.responseText);
         getFormattedDate(currentWeather.dt*1000);
-        document.getElementById("location").innerHTML = currentWeather.name + " , " + currentWeather.sys.country;
-        document.getElementById("weather").innerHTML = getFormattedDate(currentWeather.dt) + "Temp: " + currentWeather.main.temp + " Cº";
-        document.getElementById("weather").classList.add("celsius");
         document.getElementById("weather-description").innerHTML = currentWeather.weather[0].description;
+        document.getElementById("weather").innerHTML = getFormattedDate() + "-" + "Temp: " + currentWeather.main.temp + " Cº";
+        document.getElementById("location").innerHTML = currentWeather.name + " , " + currentWeather.sys.country;
+        document.getElementById("weather").classList.add("celsius");
         callback(currentWeather);
         if(currentWeather.weather[0].description == "few clouds"){
-          document.getElementById("weather-background").style.backgroundImage = "url('img/few_clouds.jpg')"
+          background.style.backgroundImage = "url('img/few_clouds.jpg')"
+        } else if (currentWeather.weather[0].description == "clear sky") {
+          background.style.backgroundImage = "url('img/clear_sky.jpg')"
         }
     }
   }
@@ -51,8 +54,8 @@ function celsiusToFarenheit() {
   weatherElement.classList.toggle("farenheit")
 }
 
-function getFormattedDate(date){
-  var fullDate = new Date(date);
+function getFormattedDate(){
+  var fullDate = new Date();
       date = fullDate.getDate(),
       month = fullDate.getMonth() + 1,
       year = fullDate.getFullYear();

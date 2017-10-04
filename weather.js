@@ -26,6 +26,14 @@ var weathers = {
                     '</div> '+
                   '</div>'
   ,
+    "Storm": '<div class="icon Thunderstorm"> '+
+                    '<div class="cloud"></div> '+
+                    '<div class="lightning"> '+
+                      '<div class="bolt"></div> '+
+                      '<div class="bolt"></div> '+
+                    '</div> '+
+                  '</div>'
+  ,
   "Clouds": '<div class="icon cloudy"> '+
               '<div class="cloud"></div> '+
               '<div class="cloud"></div> '+
